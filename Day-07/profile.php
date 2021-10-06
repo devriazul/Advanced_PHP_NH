@@ -12,7 +12,7 @@ echo $tmpName = $pro ['tmp_name'];
 echo "</br>";
 $size = $pro ['size'];
 
-echo ($size/1024) ." Kb";
+echo floor($size/1024) ." Kb";
 
 ?>
 
