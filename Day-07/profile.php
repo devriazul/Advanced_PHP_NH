@@ -16,6 +16,9 @@ if(!empty($name)){
     $location = "uploads/";
     if(move_uploaded_file($tmpName, $location.$name)){
         echo "File successfully Uploaded";
+        echo "</br>";
+        $path = $location.$name;
+        echo "<img src='$path' width='200'>";
     }else{
         echo "File not Upload";
     }
