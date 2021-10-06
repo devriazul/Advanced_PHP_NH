@@ -4,20 +4,21 @@
 
 $pro = $_FILES['profile'];
 
-echo $name = $pro ['name'];
-echo "</br>";
-echo $type = $pro ['type'];
-echo "</br>";
-echo $tmpName = $pro ['tmp_name'];
-echo "</br>";
+$name = $pro ['name'];
+$type = $pro ['type'];
+$tmpName = $pro ['tmp_name'];
 $size = $pro ['size'];
 
-echo floor($size/1024) ." Kb";
+// echo floor($size/1024) ." Kb";
 
 if(!empty($name)){
 
     $location = "uploads/";
-    move_uploaded_file($tmpName, $location.$name);
+    if(move_uploaded_file($tmpName, $location.$name)){
+        echo "File successfully Uploaded";
+    }else{
+        echo "File not Upload";
+    }
 }else{
     echo "File not found";
 }
