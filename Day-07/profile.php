@@ -14,6 +14,15 @@ $size = $pro ['size'];
 
 echo floor($size/1024) ." Kb";
 
+if(!empty($name)){
+
+    $location = "uploads/";
+    move_uploaded_file($tmpName, $location.$name);
+}else{
+    echo "File not found";
+}
+
+
 ?>
 
 </pre>
