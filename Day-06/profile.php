@@ -1,5 +1,11 @@
+<pre>
+
 <?php
 
-echo $user = $_REQUEST['test'];
+$pro = $_FILES['profile'];
+
+var_dump($pro);
 
 ?>
+
+</pre>

@@ -15,10 +15,9 @@
         <div class="row mt-5">
             <div class="col-md-3"></div>
             <div class="col-md-6">
-                <form class="form-control text-center" action="home.php" method="get">
-                    <input type="text" name="username" placeholder="User Name">
-                    <input type="password" name="password" placeholder="Password">
-                    <input class="btn btn-success" type="submit" name="Submit">
+                <form class="form-control text-center" action="profile.php" method="post" enctype="multipart/form-data">
+                    <input type="file" name="profile">
+                    <input class="btn btn-success" type="submit" name="submit" value="Upload">
                 </form>
             </div>
         </div>
