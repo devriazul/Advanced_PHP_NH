@@ -10,7 +10,9 @@ echo $type = $pro ['type'];
 echo "</br>";
 echo $tmpName = $pro ['tmp_name'];
 echo "</br>";
-echo $size = $pro ['size'];
+$size = $pro ['size'];
+
+echo ($size/1024) ." Kb";
 
 ?>
 
