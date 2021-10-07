@@ -24,6 +24,9 @@
                     <input type="password" name="password" id="" placeholder="password"><br><br>
                     <input class="btn btn-success" type="submit" name="submit" value="Submit">
                 </form>
+                <button class="btn btn-sm btn-outline-danger"><?php
+                    echo $_REQUEST ['wrongPassword'];
+                ?></button>
             </div>
         </div>
     </div>

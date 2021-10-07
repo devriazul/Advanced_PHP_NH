@@ -5,10 +5,10 @@ $userEmail = $_REQUEST['email'];
 $userPassword = $_REQUEST['password'];
 
 $countPassword = strlen($userPassword);
-    if(($countPassword>=5 && $countPassword <=10)== false){
-        echo "Wrong";
+    if(!($countPassword>=5 && $countPassword <=10)){
+        header("location: index.php?wrongPassword=Your Password Is Wrong.");
     }else{
-        echo "Perfect";
+        echo "Invalid User ID & Password";
     }
 
 ?>
