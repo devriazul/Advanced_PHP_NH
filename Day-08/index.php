@@ -15,6 +15,10 @@
         <div class="row mt-5">
             <div class="col-md-3"></div>
             <div class="col-md-6">
+            <p class="btn-outline-danger"><?php
+            if(isset($_REQUEST ['wrongPassword']))
+                    echo $_REQUEST ['wrongPassword'];
+                ?></p>
                 <form class="form-control" action="profile.php" method="post">
                     <label for="username">User Name:</label><br>
                     <input type="text" name="username" id="" placeholder="username"><br><br>
@@ -24,9 +28,7 @@
                     <input type="password" name="password" id="" placeholder="password"><br><br>
                     <input class="btn btn-success" type="submit" name="submit" value="Submit">
                 </form>
-                <button class="btn btn-sm btn-outline-danger"><?php
-                    echo $_REQUEST ['wrongPassword'];
-                ?></button>
+                
             </div>
         </div>
     </div>
