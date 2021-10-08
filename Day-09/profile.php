@@ -4,11 +4,8 @@ $userName = $_REQUEST['username'];
 $userEmail = $_REQUEST['email'];
 $userPassword = $_REQUEST['password'];
 
-$countPassword = strlen($userPassword);
-    if(!($countPassword>=5 && $countPassword <=10)){
-        header("location: index.php?wrongPassword=Your Email = $userEmail and password = $userPassword");
-    }else{
-        echo "Invalid User ID & Password";
-    }
+$hash_format = "$2a$07$";
+$salt = "sadfjl;kafaldjsdk1f22";
+$conC = $hash_format . $salt;
 
 ?>
