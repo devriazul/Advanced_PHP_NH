@@ -30,6 +30,8 @@
 
                     session_start();
 
+                    $_SESSION['user'] = "Riazul";
+
                 ?>
                 
             </div>
