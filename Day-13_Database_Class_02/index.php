@@ -23,15 +23,14 @@
                                 $email = $_POST ['email'];
                                 $password = $_POST ['password'];
 
-                                $connection = mysqli_connect('localhost','root','','advanced_php');
-                                if(!$connection){
-                                    die("Not Conected". mysqli_error($connection));
+                                $conection = mysqli_connect('localhost','root','','advanced_php');
+                                if(!$conection){
+                                    die("Not Conected". mysqli_error($conection));
 
-                                    //INSERT INTO `user_info`(`id`, `username`, `email`, `password`, `submit_date`) VALUES ('[value-1]','[value-2]','[value-3]','[value-4]','[value-5]')
                                 $query= "INSERT INTO user_info (username, email, password)";
                                 $query.="VALUES ('$username','$email','$password')";
 
-                                $result = mysqli_query($connection, $query);
+                                $result = mysqli_query($conection, $query);
 
                                 if(!$result){
                                     die("Not Inserted.". mysqli_error());
