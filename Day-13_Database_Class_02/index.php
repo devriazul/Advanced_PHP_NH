@@ -28,26 +28,20 @@
                                     die("Not Conected". mysqli_error($connection));
 
                                     //INSERT INTO `user_info`(`id`, `username`, `email`, `password`, `submit_date`) VALUES ('[value-1]','[value-2]','[value-3]','[value-4]','[value-5]')
-                                $query= "INSERT INTO user_info(username, email, password)";
+                                $query= "INSERT INTO user_info (username, email, password)";
                                 $query.="VALUES ('$username','$email','$password')";
 
-                                $result = mysqli_query($connection,$query);
+                                $result = mysqli_query($connection, $query);
 
                                 if($result){
                                     echo "Submit data successfully";
                                 }else{
                                     echo "Data not submitted";
                                 }
-
-
-                                    //     echo "Database Conected.";
-                                    // }else{
-                                    //     echo "Not conected.". mysqli_error();
-                                    // }
                                 }
                             }
                 ?>
-                <form class="form-control" action="" method="post">
+                <form class="form-control" action="index.php" method="post">
                     <label for="username">User Name:</label><br>
                     <input type="text" name="username" id="" placeholder="username"><br><br>
                     <label for="email">Email Address:</label><br>
