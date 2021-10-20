@@ -33,12 +33,10 @@
 
                                 $result = mysqli_query($connection, $query);
 
-                                if($result){
-                                    echo "Submit data successfully";
-                                }else{
-                                    echo "Data not submitted";
+                                if(!$result){
+                                    die("Not Inserted.". mysqli_error());
                                 }
-                                }
+                            }
                             }
                 ?>
                 <form class="form-control" action="index.php" method="post">
