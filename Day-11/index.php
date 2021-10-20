@@ -17,16 +17,18 @@
             <div class="col-md-6">
                 <?php
 
-                    $name= "user";
-                    $value = "Riazul";
+                    // $name= "user";
+                    // $value = "Riazul";
 
-                    setcookie($name, $value, time()+20);
+                    // setcookie($name, $value, time()+20);
 
-                    if(isset($_COOKIE['user'])){
-                        echo "Save cookie is : {$_COOKIE['user']}";
-                    }else{
-                        echo "Cookie not found";
-                    }
+                    // if(isset($_COOKIE['user'])){
+                    //     echo "Save cookie is : {$_COOKIE['user']}";
+                    // }else{
+                    //     echo "Cookie not found";
+                    // }
+
+                    session_start();
 
                 ?>
                 
