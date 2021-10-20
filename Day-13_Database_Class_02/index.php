@@ -24,10 +24,14 @@
                                 $password = $_POST ['password'];
 
                                 $connection = mysqli_connect('localhost','root','','advanced_php');
-                                if($connection){
-                                    echo "Conected";
-                                }else{
-                                    echo "Not conected.". mysqli_error();
+                                if(!$connection){
+                                    die("Not Conected". mysqli_error($connection));
+
+                                    // {
+                                    //     echo "Database Conected.";
+                                    // }else{
+                                    //     echo "Not conected.". mysqli_error();
+                                    // }
                                 }
                             }
                 ?>
