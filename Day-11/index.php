@@ -22,6 +22,12 @@
 
                     setcookie($name, $value, time()+20);
 
+                    if(isset($_COOKIE['user'])){
+                        echo "{$_COOKIE['user']}";
+                    }else{
+                        echo "Cookie not found";
+                    }
+
                 ?>
                 
             </div>
