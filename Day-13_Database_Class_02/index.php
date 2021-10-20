@@ -16,8 +16,22 @@
         <div class="row mt-5">
             <div class="col-md-3"></div>
             <div class="col-md-6">
-            <p class="btn-outline-danger"></p>
-                <form class="form-control" action="profile.php" method="post">
+                <?php
+                    if(isset($_POST ['submit']))
+                            {
+                                $username = $_POST ['username'];
+                                $email = $_POST ['email'];
+                                $password = $_POST ['password'];
+
+                                $connection = mysqli_connect('localhost','root','','advanced_php');
+                                if($connection){
+                                    echo "Conected";
+                                }else{
+                                    echo "Not conected.". mysqli_error();
+                                }
+                            }
+                ?>
+                <form class="form-control" action="" method="post">
                     <label for="username">User Name:</label><br>
                     <input type="text" name="username" id="" placeholder="username"><br><br>
                     <label for="email">Email Address:</label><br>
