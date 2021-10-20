@@ -23,7 +23,7 @@
                     setcookie($name, $value, time()+20);
 
                     if(isset($_COOKIE['user'])){
-                        echo "{$_COOKIE['user']}";
+                        echo "Save cookie is : {$_COOKIE['user']}";
                     }else{
                         echo "Cookie not found";
                     }
