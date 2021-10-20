@@ -1,7 +1,6 @@
 <?php
 
-//CRUD
-//DB= "advanced_php"
+//CRUD DB= "advanced_php"
 
 
 ?>
