@@ -16,10 +16,7 @@
         <div class="row mt-5">
             <div class="col-md-3"></div>
             <div class="col-md-6">
-            <p class="btn-outline-danger"><?php
-            if(isset($_REQUEST ['wrongPassword']))
-                    echo $_REQUEST ['wrongPassword'];
-                ?></p>
+            <p class="btn-outline-danger"></p>
                 <form class="form-control" action="profile.php" method="post">
                     <label for="username">User Name:</label><br>
                     <input type="text" name="username" id="" placeholder="username"><br><br>
