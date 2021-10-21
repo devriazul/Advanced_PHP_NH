@@ -9,7 +9,7 @@
                                 $conection = mysqli_connect('localhost','root','','advanced_php');
                                 if(!$conection){
                                     die("Not Conected". mysqli_error($conection));
-
+                                }
                                 $query= "INSERT INTO user_info (username, email, password)";
                                 $query.="VALUES ('$username','$email','$password')";
 
@@ -18,7 +18,6 @@
                                 if(!$result){
                                     die("Not Inserted.". mysqli_error());
                                 }
-                            }
                             }
                 ?>
 
