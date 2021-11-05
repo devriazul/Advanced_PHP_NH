@@ -1,4 +1,27 @@
 <!-- //CRUD DB= "advanced_php" -->
+<?php
+    if(isset($_POST ['submit']))
+        {
+            $username = $_POST ['username'];
+            $email = $_POST ['email'];
+            $password = $_POST ['password'];
+        
+            $conection = mysqli_connect('localhost','root','','advanced_php');
+                if(!$conection){
+                    die("Not Conected". mysqli_error($conection));
+                }
+            
+            $query= "INSERT INTO user_info (username, email, password)";
+            $query.="VALUES ('$username','$email','$password')";
+
+            $result = mysqli_query($conection, $query);
+
+                if(!$result){
+                    die("Not Inserted.". mysqli_error());
+                    }
+        }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -16,29 +39,7 @@
         <div class="row mt-5">
             <div class="col-md-3"></div>
             <div class="col-md-6">
-                <?php
-                    if(isset($_POST ['submit']))
-                            {
-                                $username = $_POST ['username'];
-                                $email = $_POST ['email'];
-                                $password = $_POST ['password'];
-
-                                $conection = mysqli_connect('localhost','root','','advanced_php');
-                                if(!$conection){
-                                    die("Not Conected". mysqli_error($conection));
-
-                                $query= "INSERT INTO user_info (username, email, password)";
-                                $query.="VALUES ('$username','$email','$password')";
-
-                                $result = mysqli_query($conection, $query);
-
-                                if(!$result){
-                                    die("Not Inserted.". mysqli_error());
-                                }
-                            }
-                            }
-                ?>
-                <form class="form-control" action="index.php" method="post">
+                <form class="form-control" action="#" method="post">
                     <label for="username">User Name:</label><br>
                     <input type="text" name="username" id="" placeholder="username"><br><br>
                     <label for="email">Email Address:</label><br>
